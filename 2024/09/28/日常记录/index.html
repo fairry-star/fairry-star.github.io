@@ -258,6 +258,7 @@
         
         
         
+          <!-- compatible with older versions-->
           1 分钟
         
       </span>
@@ -402,10 +403,10 @@
     Fluid.utils.loadComments('#valine', function() {
       Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
         var options = Object.assign(
-          {"appId":"3TVwK8oV9ip5TRzwIWLcDLut-gzGzoHsz","appKey":"lxSivarfdjHGOMm8iQw381Vg","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {"enable":true,"appId":"3TVwK8oV9ip5TRzwIWLcDLut-gzGzoHsz","appKey":"lxSivarfdjHGOMm8iQw381Vg","notify":false,"verify":false,"placeholder":"Just go go","avatar":"mm","guest_info":"nick,mail,link","pageSize":10,"language":null,"visitor":false,"comment_count":true,"recordIP":false,"serverURLs":null},
           {
             el: "#valine",
-            path: window.location.pathname
+            path: 
           }
         )
         new Valine(options);
