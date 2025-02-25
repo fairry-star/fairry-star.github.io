@@ -29,6 +29,31 @@
   
   
   <entry>
+    <title>数学</title>
+    <link href="/2024/10/10/%E9%AB%98%E6%95%B0/"/>
+    <url>/2024/10/10/%E9%AB%98%E6%95%B0/</url>
+    
+    <content type="html"><![CDATA[<p><img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20250225164247624.png" alt="image-20250225164247624"></p><h3 id="1-函数-极限-连续"><a href="#1-函数-极限-连续" class="headerlink" title="1.函数   极限  连续"></a>1.函数   极限  连续</h3><h3 id="1-1函数"><a href="#1-1函数" class="headerlink" title="1.1函数"></a>1.1函数</h3><p>常考题型：</p><p><strong>函数的有界性、单调性、周期性、奇偶性判定</strong></p><p><strong>复合函数</strong></p><h3 id=""><a href="#" class="headerlink" title=""></a><img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20250225163612712.png" alt="image-20250225163612712"></h3><p>当x取二分之派 +2nπ 时xsinx是无界的，cosx&#x3D;0，故无界  P7</p><p>f(-x)&#x3D;f(x)可知是偶函数</p><p><img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20250225164610818.png" alt="image-20250225164610818"></p><p>注意X是谁 ，题目中x是内层函数的定义域 复合函数的内层函数的值域是外层函数的定义域。</p><p><img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20250225165539038.png" alt="image-20250225165539038"></p><p>注意定义域范围。注意第二部是判断定义域的关键。e的x次方图像</p><h3 id="1-2极限"><a href="#1-2极限" class="headerlink" title="1.2极限"></a>1.2极限</h3><p>题型：</p><p><strong>极限的概念性质和存在准则：选择题和证明题递推关系</strong></p><p><strong>求极限</strong></p><p><strong>无穷小量阶的比较</strong></p><p><img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20250225171627001.png" alt="image-20250225171627001"></p><p>奇数列和偶数列的极限相等时，才能推出该数列极限。</p><p><img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20250225172010452.png" alt="image-20250225172010452"></p><p>解法1：分子分母同时除N</p><p>解法2：夹逼准则</p><p>解法3：极限重要定理</p><p>解法3：有指数取对数（无穷小*有界&#x3D;0）</p><p><img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20250225172805363.png" alt="image-20250225172805363"></p><p>证明题是注意利用性质定理。证明不成立时举反例。第二问往往利用第一问的结论。</p><p>第二问同样利用性质定理证明。</p><p>结论：</p><p><img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20250225173047306.png" alt="image-20250225173047306"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>数学</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>数学、高等数学</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>英语六级</title>
     <link href="/2024/10/10/%E8%8B%B1%E8%AF%AD%E5%85%AD%E7%BA%A7/"/>
     <url>/2024/10/10/%E8%8B%B1%E8%AF%AD%E5%85%AD%E7%BA%A7/</url>
