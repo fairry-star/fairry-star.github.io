@@ -19,15 +19,15 @@
   <meta name="author" content="fairy">
   <meta name="keywords" content="">
   
-    <meta name="description" content="fairy-blog">
+    <meta name="description" content="1.scanf的读取标准输入1.1scanf不能连续使用（char）1234567891011#include &lt;stdio.h&gt;int main()&#123;    int i;    char c;    scanf(&quot;%d&quot;,&amp;i);    printf(&quot;%d\n&quot;,i);    fflush(stdin);&#x2F;&#x2F;清空缓冲区">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C语言">
 <meta property="og:url" content="https://eternaldeath.github.io/2024/10/10/C%E8%AF%AD%E8%A8%80/index.html">
 <meta property="og:site_name" content="fairy">
-<meta property="og:description" content="fairy-blog">
+<meta property="og:description" content="1.scanf的读取标准输入1.1scanf不能连续使用（char）1234567891011#include &lt;stdio.h&gt;int main()&#123;    int i;    char c;    scanf(&quot;%d&quot;,&amp;i);    printf(&quot;%d\n&quot;,i);    fflush(stdin);&#x2F;&#x2F;清空缓冲区">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-10T11:33:15.000Z">
-<meta property="article:modified_time" content="2025-02-25T12:35:20.431Z">
+<meta property="article:modified_time" content="2025-02-25T13:59:55.993Z">
 <meta property="article:author" content="fairy">
 <meta property="article:tag" content="C语言">
 <meta name="twitter:card" content="summary_large_image">
@@ -260,7 +260,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          369 字
         
       </span>
     
@@ -272,7 +272,7 @@
         
         
           <!-- compatible with older versions-->
-          1 分钟
+          4 分钟
         
       </span>
     
@@ -323,7 +323,20 @@
             
               <div class="markdown-body">
                 
-                
+                <h2 id="1-scanf的读取标准输入"><a href="#1-scanf的读取标准输入" class="headerlink" title="1.scanf的读取标准输入"></a>1.scanf的读取标准输入</h2><h3 id="1-1scanf不能连续使用（char）"><a href="#1-1scanf不能连续使用（char）" class="headerlink" title="1.1scanf不能连续使用（char）"></a>1.1scanf不能连续使用（char）</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-type">int</span> i;<br>    <span class="hljs-type">char</span> c;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;i);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>,i);<br>    <span class="hljs-built_in">fflush</span>(stdin);<span class="hljs-comment">//清空缓冲区</span><br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%c&quot;</span>,&amp;c);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%c&quot;</span>,c);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>注意：scanf是以换行结束执，行下一条语句。不加换换行，直接回车会将换行当做输入。但是scanf、函数在读取整形数、浮点数、字符串会自动忽略空格换行。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-type">int</span> a;<br>    <span class="hljs-type">char</span> c;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d &quot;</span>,&amp;a);<span class="hljs-comment">//在后面加空格也可以</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a=%d&quot;</span>,a);<br>   <span class="hljs-comment">// fflush(stdin);</span><br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%c&quot;</span>,&amp;c);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;c=%c&quot;</span>,c);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-type">int</span> i;<br>    <span class="hljs-type">char</span> c;<br>    <span class="hljs-type">int</span> a;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;i);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>,i);<br>    <span class="hljs-built_in">fflush</span>(stdin);<span class="hljs-comment">//清空缓冲区</span><br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%c&quot;</span>,&amp;c);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%c&quot;</span>,c);<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;a);<span class="hljs-comment">//a为整数自动忽略</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>,a);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="1-2scanf连续输入"><a href="#1-2scanf连续输入" class="headerlink" title="1.2scanf连续输入"></a>1.2scanf连续输入</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-type">int</span> i;<br>    <span class="hljs-type">char</span> c;<br>    <span class="hljs-type">float</span> a;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d %c%f&quot;</span>,&amp;i,&amp;c,&amp;a);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;i=%d c=%c a=%f&quot;</span>,i,c,a);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>%c之前必须有空格，否则会报错读取不到数据。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-type">int</span> a;<br>    <span class="hljs-type">char</span> c;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d &quot;</span>,&amp;a);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a=%d&quot;</span>,a);<br>    c=<span class="hljs-built_in">char</span>(a);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot; %c&quot;</span>,c);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>%d后有空格：如果输入 97 后直接按回车键，程序不会结束，而是会等待输入一个空格。只有再输入一个空格后，程序才会继续执行。</p>
+
                 
               </div>
             
