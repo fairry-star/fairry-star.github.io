@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://eternaldeath.github.io/2024/10/10/C%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80/image-20250303105956622.png">
 <meta property="og:image" content="https://eternaldeath.github.io/C%E8%AF%AD%E8%A8%80/image-20250303113741995.png">
 <meta property="article:published_time" content="2024-10-10T11:33:15.000Z">
-<meta property="article:modified_time" content="2025-03-03T03:43:18.341Z">
+<meta property="article:modified_time" content="2025-03-04T13:51:55.329Z">
 <meta property="article:author" content="fairy">
 <meta property="article:tag" content="C语言">
 <meta name="twitter:card" content="summary_large_image">
@@ -264,7 +264,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.7k 字
+          2.8k 字
         
       </span>
     
@@ -276,7 +276,7 @@
         
         
           <!-- compatible with older versions-->
-          23 分钟
+          24 分钟
         
       </span>
     
@@ -440,20 +440,20 @@
 
 <p>当输入字符串有空格时：</p>
 <p><strong>当输入<code> hello world</code>（开头有空格）时，<code>scanf</code>只会读取到<code>hello</code>，因为遇到空格就停止读取了，<code>world</code>不会被读入到<code>str</code>中</strong>。</p>
+<p>scanf读不到world</p>
 <p><img src="/C%E8%AF%AD%E8%A8%80/image-20250303113741995.png" srcset="/img/loading.gif" lazyload alt="image-20250303113741995"></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-comment">//scanf读取字符串时，会自动往字符数组里面读取\0</span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-type">char</span> c[<span class="hljs-number">10</span>];<br>    <span class="hljs-type">char</span> d[<span class="hljs-number">10</span>];<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%s%s&quot;</span>,c,d);<span class="hljs-comment">//数字名存储了数组的起始地址不需要取地址，而且忽略了空格</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s%s\n&quot;</span>,c,d);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
 
+<h2 id="5-gets-与puts讲解"><a href="#5-gets-与puts讲解" class="headerlink" title="5.gets 与puts讲解"></a>5.gets 与puts讲解</h2><p>gets函数：一次读一行字符串</p>
+<p>puts(c)：等价于printf（“%s\n”,c）puts内放的参数是字符数组名</p>
+<p>gets函数的格式如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-type">char</span> c[<span class="hljs-number">20</span>];<br>    <span class="hljs-built_in">gets</span>(c);<br>    <span class="hljs-built_in">puts</span>(c);等价于printf（“%s\n”,c）puts内放的参数是字符数组名<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s\n&quot;</span>,c);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-
-
-
-
-
-
-
-
+<p>scanf遇到空格就不读了</p>
+<p><strong>gets遇到换行才结束</strong></p>
+<h2 id="6-str系列字符串操作函数"><a href="#6-str系列字符串操作函数" class="headerlink" title="6.str系列字符串操作函数"></a>6.str系列字符串操作函数</h2>
                 
               </div>
             
